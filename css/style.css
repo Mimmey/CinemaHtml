@@ -15,11 +15,40 @@ body {
     margin:auto;
 }
 
-.header {
+.film {
+    color: #fff;
+    margin-top: 60px;
     display: flex;
     align-items: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
+}
+
+.film-description {
+    font-size: 16px;
+    line-height: 150%;
+    max-width: 570px;
+}
+
+.film-title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-top: 11px;
+    margin-bottom: 23px;
+}
+
+.film-title-small {
+    opacity: 50%;
+    font-size: 24px;
+    line-height: 150%;
+}
+
+.film-trailer {
+    margin: auto;
+}
+
+.header {
+    background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), 
+    url(../img/bg.jpg) no-repeat center top / cover;
+    min-height: 100vh;
 }
 
 .menu {
@@ -36,6 +65,13 @@ body {
 .menu-link {
     color: #fff;
     text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .user {
