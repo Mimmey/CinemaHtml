@@ -1,2 +1,2 @@
 # CinemaHtml
-HTML coding trial
+HTML with intensive course by Glo Academy.
