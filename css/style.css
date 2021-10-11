@@ -1,6 +1,12 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: #621402;
     font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    color: #fff;
 }
 
 .avatar {
@@ -15,17 +21,25 @@ body {
     margin:auto;
 }
 
+.clock {
+    margin-right: 14px;
+}
+
 .film {
-    color: #fff;
     margin-top: 60px;
     display: flex;
     align-items: center;
 }
 
 .film-description {
-    font-size: 16px;
     line-height: 150%;
     max-width: 570px;
+}
+
+.film-details {
+    display: flex;
+    align-items: center;
+    margin-top: 51px;
 }
 
 .film-title {
@@ -74,9 +88,118 @@ body {
     padding-bottom: 30px;
 }
 
+.rating {
+    margin-left: 34px;
+}
+
+.rating-current {
+    font-size: 24px;
+}
+
+.rating-icon {
+    margin-left: 34px;
+}
+
+.select {
+    cursor: pointer;
+    height: 60px;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin-top: 33px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-left: 18px;
+}
+
+.select-cinema {
+    width: 470px;
+}
+
+.select-time {
+    width: 108px;
+}
+
+.session {
+    display: flex;
+    padding-top: 46px;
+    padding-bottom: 64px;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    margin-top: 59px;
+    margin-bottom: 59px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.session-cinema {
+    display: flex;
+    flex-direction: column;
+}
+
+.session-time {
+    display: flex;
+    flex-direction: column;
+}
+
+.session-date-block {
+    display: flex;
+    margin-top: 20px;
+}
+
+.session-date-day {
+    font-weight: 900;
+    font-size: 30px;
+    line-height: 35px;
+}
+
+.session-date-item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+    justify-content: center;
+    margin-right: 15px;
+    transition: background-color 0.2s;
+}
+
+.session-date-item:hover {
+    cursor: pointer;
+    background-color: #FE8E05;
+    color: #621402;
+}
+
+.session-date-month {
+    margin-top: 9px;
+    line-height: 19px;
+}
+
+.session-date-week {
+    font-size: 19px;
+    line-height: 12px;
+    margin-bottom: 9px;
+}
+
+.session-time {
+    line-height: 19px;
+}
+
+.time {
+    display: flex;
+    align-items: center;
+}
+
+.time-counter {
+    font-size: 16px;
+}
+
 .user {
     margin-left: auto;
-    color: #fff;
     display: flex;
     align-items: center;
 }

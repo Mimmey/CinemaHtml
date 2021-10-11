@@ -1,78 +1,147 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Cinema</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <header class="header">
-       <div class="navbar container">
-        <a href="/">
-            <img src="img/logo.svg" alt="logo">
-        </a>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Online Cinema</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
 
-        <nav class="nav">
-            <ul class="menu">
-                <li class="menu-item"> 
-                    <a class="menu-link" href="#">Главная</a>
-                </li>
-                <li class="menu-item"> 
-                    <a class="menu-link" href="#">Фильмы</a>
-                </li>
-                <li class="menu-item"> 
-                    <a class="menu-link" href="#">Кинотеатры</a>
-                </li>
-                <li class="menu-item"> 
-                    <a class="menu-link" href="#">События</a>
-                </li>
-                <li class="menu-item"> 
-                    <a class="menu-link" href="#">Поддержка</a>
-                </li>
-            </ul>
-        </nav>
+    <body>
+        <header class="header">
+            <div class="navbar container">
+                <a href="/">
+                   <img src="img/logo.svg" alt="logo">
+                </a>
 
-        <div class="user">
-            <span>Привет, Оля</span>
-            <img class="avatar" src="img/avatar.jpg" alt="Ольга Мотылева">
-        </div>
-       </div>
-       <!-- /.navbar -->
+                <nav class="nav">
+                    <ul class="menu">
+                        <li class="menu-item"> 
+                            <a class="menu-link" href="#">Главная</a>
+                        </li>
 
-       <div class="film container">
-           <div class="film-info">
-                <small class="film-title-small">
-                    Avengers: Infinity War
-                </small>
+                        <li class="menu-item"> 
+                            <a class="menu-link" href="#">Фильмы</a>
+                        </li>
 
-                <h1 class="film-title">
-                    Мстители: война бесконечности
-                </h1>
+                        <li class="menu-item"> 
+                            <a class="menu-link" href="#">Кинотеатры</a>
+                        </li>
 
-                <p class="film-description">
-                    Пока Мстители и их союзники продолжают защищать мир от различных 
-                    опасностей, с которыми не смог бы справиться один супергерой, 
-                    новая угроза возникает из космоса: Танос. Межгалактический тиран 
-                    преследует цель собрать все шесть Камней Бесконечности - артефакты 
-                    невероятной силы, с помощью которых можно менять реальность по своему 
-                    желанию. Всё, с чем Мстители сталкивались ранее, вело к этому моменту – 
-                    судьба Земли никогда ещё не была столь неопределённой.
-                </p>
-           </div>
-           <!-- /.film-info -->
-           <a href="#" class="film-trailer">
-               <img src="img/play-button.svg" alt="play-button">
-           </a>
+                        <li class="menu-item"> 
+                            <a class="menu-link" href="#">События</a>
+                        </li>
+
+                        <li class="menu-item"> 
+                            <a class="menu-link" href="#">Поддержка</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="user">
+                    <span>Привет, Оля</span>
+
+                    <img class="avatar" src="img/avatar.jpg" alt="Ольга Мотылева">
+                </div>
+            </div>
+
+            <div class="film container">
+                <div class="film-info">
+                    <small class="film-title-small">
+                        Avengers: Infinity War
+                    </small>
+
+                    <h1 class="film-title">
+                        Мстители: война бесконечности
+                    </h1>
+
+                    <p class="film-description">
+                        Пока Мстители и их союзники продолжают защищать мир от различных 
+                        опасностей, с которыми не смог бы справиться один супергерой, 
+                        новая угроза возникает из космоса: Танос. Межгалактический тиран 
+                        преследует цель собрать все шесть Камней Бесконечности - артефакты 
+                        невероятной силы, с помощью которых можно менять реальность по своему 
+                        желанию. Всё, с чем Мстители сталкивались ранее, вело к этому моменту – 
+                        судьба Земли никогда ещё не была столь неопределённой.
+                    </p>
+
+                    <div class="film-details">
+                        <div class="time">
+                            <img src="img/clock.svg" alt="clock" class="clock">
+                            <span class="time-counter">240 мин.</span>
+                        </div>
+
+                        <div class="rating">
+                            <img src="img/imdb.jpg" alt="imdb" class="rating-icon">
+
+                            <span class="rating-counter">
+                                <strong class="rating-current">9.2</strong> / 10
+                            </span>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#" class="film-trailer">
+                   <img src="img/play-button.svg" alt="play-button">
+                </a>
+            </div>
+
+            <div class="session container">
+                <div class="session-date">
+                    <span class="session-label">Дата</span>
+
+                    <div class="session-date-block">
+                        <div class="session-date-item">
+                            <span class="session-date-month">АПР</span>
+                            <span class="session-date-day">27</span>
+                            <span class="session-date-week">пт</span>
+                        </div>
+    
+                        <div class="session-date-item">
+                            <span class="session-date-month">АПР</span>
+                            <span class="session-date-day">28</span>
+                            <span class="session-date-week">сб</span>
+                        </div>
+    
+                        <div class="session-date-item">
+                            <span class="session-date-month">АПР</span>
+                            <span class="session-date-day">29</span>
+                            <span class="session-date-week">вс</span>
+                        </div>
+    
+                        <div class="session-date-item">
+                            <span class="session-date-month">АПР</span>
+                            <span class="session-date-day">30</span>
+                            <span class="session-date-week">пн</span>
+                        </div>    
+                    </div>
+                </div>
             
-       </div>
-       <!-- /.film -->
+                <div class="session-cinema">
+                    <span class="session-label">Кинотеатр</span>
 
-    </header>
-</body>
+                    <select class="select select-cinema" name="cinema">
+                        <option value="Октябрь, ул. Калужская 28">Октябрь, ул. Калужская 28</option>
+                        <option value="Родина, ул. Ленина 42">Родина, ул. Ленина 42</option>
+                        <option value="Формула Кино, пр. Коломяжский 17 А">Формула Кино, пр. Коломяжский 17 А</option>
+                    </select>
+                </div>
+            
+                <div class="session-time">
+                    <span class="session-label">Время</span>
+
+                    <select class="select select-time" name="time">
+                        <option value="12:00">12:00</option>
+                        <option value="15:00">15:00</option>
+                        <option value="18:00">18:00</option>
+                    </select>
+                </div>
+            </div>
+        </header>
+    </body>
 </html>
