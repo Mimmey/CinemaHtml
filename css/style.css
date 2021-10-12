@@ -9,6 +9,15 @@ body {
     color: #fff;
 }
 
+hr { 
+    display: block; height: 1px;
+    border: 0; 
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    width: 1030px;
+    margin-top: 0px;
+    padding: 0; 
+}
+
 .avatar {
     width: 33px;
     height: 33px;
@@ -65,6 +74,33 @@ body {
     min-height: 100vh;
 }
 
+.legend {
+    display: flex;
+    margin-left: 70px;
+}
+
+.legend-free .legend-text,
+.legend-booked .legend-text {
+    opacity: 0.5;
+}
+
+.legend-active .legend-text {
+    color: #FE8E05;
+}
+
+
+.legend-label {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.legend-text {
+    line-height: 75px;
+    margin-left: 15px;
+}
+
+
 .menu {
     list-style: none;
     display: flex;
@@ -88,6 +124,37 @@ body {
     padding-bottom: 30px;
 }
 
+.price {
+    margin-top: 62px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 170px;
+}
+
+.price-button {
+    background: #FE8E05;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #fff;
+    width: 254px;
+    height: 69px;
+    font-size: 18px;
+    line-height: 21px;
+    text-align: center;
+    line-height: 69px;
+}
+
+.price-label {
+    font-size: 18px;
+    line-height: 21px;
+}
+
+.price-tag {
+    font-size: 52px;
+    line-height: 61px;
+}
+
 .rating {
     margin-left: 34px;
 }
@@ -98,6 +165,38 @@ body {
 
 .rating-icon {
     margin-left: 34px;
+}
+
+.scheme {
+    background: rgba(36, 36, 36, 0.18);
+    border-radius: 10px;
+    margin-top: 61px;
+    padding-top: 48px;
+}
+
+.scheme-svg-container {
+    margin: auto;
+    width: 1028px;
+    height: 559px;
+}
+
+.scheme .seat {
+    fill: rgba(255, 255, 255, 0.2);
+}
+
+.scheme .seat:hover {
+    cursor: pointer;
+    fill: rgba(255, 255, 255, 0.5);
+}
+
+.scheme .active {
+    fill: #FE8E05;
+}
+
+.scheme .booked, 
+.scheme .booked:hover {
+    fill: rgba(255, 255, 255, 0.05);
+    cursor: not-allowed;
 }
 
 .select {
