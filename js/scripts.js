@@ -1,5 +1,8 @@
 const schemeSVG = document.querySelector(".scheme-svg");
 const totalPriceTag = document.querySelector(".price-total");
+const menuButton = document.querySelector(".m-menu");
+const menu = document.querySelector(".menu");
+
 let seatsAmount = 0;
 let cost = 800;
 let totalPrice = 0;
@@ -11,4 +14,8 @@ schemeSVG.addEventListener("click", (event) => {
         totalPrice = seatsAmount * cost;
         totalPriceTag.textContent = totalPrice;
     }
+});
+
+menuButton.addEventListener("click", (event) => {
+    menu.classList.toggle("is-open");
 });

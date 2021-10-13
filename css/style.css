@@ -27,7 +27,9 @@ hr {
 
 .container {
     max-width: 1170px;
-    margin:auto;
+    margin: auto;
+    padding: 0 30px 0 30px;
+    width: 90%;
 }
 
 .clock {
@@ -71,12 +73,13 @@ hr {
 .header {
     background: linear-gradient(180deg, rgba(98, 20, 2, 0.31) 0%, #621402 85.62%), 
     url(../img/bg.jpg) no-repeat center top / cover;
-    min-height: 100vh;
 }
 
 .legend {
     display: flex;
-    margin-left: 70px;
+    margin: 0;
+    max-width: 1024px;
+    width: 94%;
 }
 
 .legend-free .legend-text,
@@ -100,6 +103,9 @@ hr {
     margin-left: 15px;
 }
 
+.m-menu {
+    display: none;
+}
 
 .menu {
     list-style: none;
@@ -115,6 +121,10 @@ hr {
 .menu-link {
     color: #fff;
     text-decoration: none;
+}
+
+.nav {
+    position: relative;
 }
 
 .navbar {
@@ -174,10 +184,16 @@ hr {
     padding-top: 48px;
 }
 
+.scheme-svg {
+    margin: 0;
+}
+
 .scheme-svg-container {
     margin: auto;
-    width: 1028px;
-    height: 559px;
+    max-width: 1028px;
+    max-height: 559px;
+    padding-left: 7.4%;
+    padding-right: 7.4%;
 }
 
 .scheme .seat {
@@ -263,8 +279,11 @@ hr {
     height: 90px;
     text-align: center;
     justify-content: center;
-    margin-right: 15px;
     transition: background-color 0.2s;
+}
+
+.session-date-item:not(:last-child) {
+    margin-right: 15px;
 }
 
 .session-date-item:hover {
@@ -301,4 +320,109 @@ hr {
     margin-left: auto;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .select-cinema {
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 750px;
+    }
+
+    .menu-item {
+        margin-right: 20px;
+    }
+
+    .scheme-svg-container {
+        padding-left: 7.4%;
+        padding-right: 7.4%;
+    }
+
+    .select-cinema {
+        width: 100%;
+    }
+
+    .session {
+        flex-wrap: wrap;
+    }
+
+    .session-cinema {
+        order: 3;
+    }
+
+    .session-date {
+        margin-bottom: 40px;
+    }
+
+    .session-time {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 600px;
+    }
+
+    .session-date {
+        width: 100%;
+    }
+
+    .m-menu {
+        display: block;
+        cursor: pointer;
+        background-color: transparent;
+        border: none;
+        width: 40px;
+        height: 40px;
+        margin-left: 20px;
+    }
+
+    .menu {
+        position: absolute;
+        left: 0;
+        top: 40px;
+        padding: 15px;
+        margin-left: 25px;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.5);;
+        z-index: 9;
+        border-radius: 10px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(20%);
+        transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .menu-item:not(:last-child) {
+        margin-bottom: 10px;
+    }
+
+    .is-open {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .film {
+        flex-direction: column;
+    }
+
+    .film-description {
+        margin-right: 30px;
+    }
+
+    .film-trailer {
+        margin-right: auto;
+        margin-left: 0;
+        margin-top: 40px;
+    }
 }

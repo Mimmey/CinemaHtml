@@ -9,6 +9,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css"/>
         <link rel="stylesheet" href="css/style.css">
     </head>
 
@@ -20,6 +21,10 @@
                 </a>
 
                 <nav class="nav">
+                    <button class="m-menu">
+                        <img src="img/menu-button.svg" alt="menu">
+                    </button>
+
                     <ul class="menu">
                         <li class="menu-item"> 
                             <a class="menu-link" href="#">Главная</a>
@@ -86,7 +91,7 @@
                     </div>
                 </div>
 
-                <a href="#" class="film-trailer">
+                <a data-fancybox="video-gallery" data-src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" href="#" class="film-trailer">
                    <img src="img/play-button.svg" alt="play-button">
                 </a>
             </div>
@@ -146,7 +151,7 @@
 
         <div class="scheme container">
             <div class="scheme-svg-container">
-                <svg class="scheme-svg" width="1028" height="559" viewBox="0 0 1028 559" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="scheme-svg" viewBox="0 0 1028 559" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path class="light" d="M58 77L131.04 10H898.96L972 77H58Z" fill="url(#paint0_linear)"/>
                     
                     <line x1="6" y1="5" x2="1024" y2="5" stroke="black" stroke-opacity="0.39" stroke-width="10"/>
@@ -316,32 +321,33 @@
                         </linearGradient>
                     </defs>
                 </svg>
-            </div>
 
-            <div class="legend">
-                <div class="legend-free legend-label">
-                    <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" width="26" height="23" rx="5" fill="white" fill-opacity="0.2"/>
-                    </svg>
-
-                    <span class="legend-text">Свободно</span>
+                <div class="legend">
+                    <div class="legend-free legend-label">
+                        <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" width="26" height="23" rx="5" fill="white" fill-opacity="0.2"/>
+                        </svg>
+    
+                        <span class="legend-text">Свободно</span>
+                    </div>
+    
+                    <div class="legend-active legend-label">
+                        <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" width="26" height="23" rx="5" fill="#FE8E05"/>
+                        </svg>    
+    
+                        <span class="legend-text">Выбрано</span>
+                    </div>
+    
+                    <div class="legend-booked legend-label">
+                        <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="0.5" width="26" height="23" rx="5" fill="white" fill-opacity="0.05"/>
+                        </svg>       
+    
+                        <span class="legend-text">Занято</span>
+                    </div>
                 </div>
 
-                <div class="legend-active legend-label">
-                    <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" width="26" height="23" rx="5" fill="#FE8E05"/>
-                    </svg>    
-
-                    <span class="legend-text">Выбрано</span>
-                </div>
-
-                <div class="legend-booked legend-label">
-                    <svg width="27" height="23" viewBox="0 0 27 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="0.5" width="26" height="23" rx="5" fill="white" fill-opacity="0.05"/>
-                    </svg>       
-
-                    <span class="legend-text">Занято</span>
-                </div>
             </div>
         </div>
 
@@ -358,6 +364,7 @@
             <a href="#" class="button price-button">Перейти к оплате</a>
         </div>
 
+        <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
         <script src="js/scripts.js"></script>
     </body>
 </html>
