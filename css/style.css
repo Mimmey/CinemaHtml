@@ -252,16 +252,19 @@ hr {
 .session-cinema {
     display: flex;
     flex-direction: column;
+    margin-right: 25px;
 }
 
 .session-time {
     display: flex;
     flex-direction: column;
+    margin-right: 25px;
 }
 
 .session-date-block {
     display: flex;
     margin-top: 20px;
+    margin-right: 25px;
 }
 
 .session-date-day {
@@ -337,6 +340,11 @@ hr {
         max-width: 750px;
     }
 
+    .menu {
+        margin-left: 0;
+        padding-left: 25px;
+    }
+
     .menu-item {
         margin-right: 20px;
     }
@@ -367,13 +375,21 @@ hr {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
+    .avatar {
+        margin-left: 10px;
+    }
+
     .container {
         max-width: 600px;
     }
 
     .session-date {
         width: 100%;
+    }
+
+    .session-time {
+        margin-bottom: 25px;
     }
 
     .m-menu {
@@ -424,5 +440,11 @@ hr {
         margin-right: auto;
         margin-left: 0;
         margin-top: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .legend {
+        width: 100%;
     }
 }
