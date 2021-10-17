@@ -19,7 +19,7 @@ hr {
 }
 
 .avatar {
-    width: 33px;
+    min-width: 33px;
     height: 33px;
     border-radius: 50%;
     margin-left: 11px;
@@ -40,6 +40,7 @@ hr {
     margin-top: 60px;
     display: flex;
     align-items: center;
+    padding: 0;
 }
 
 .film-description {
@@ -75,32 +76,10 @@ hr {
     url(../img/bg.jpg) no-repeat center top / cover;
 }
 
-.legend {
-    display: flex;
-    margin: 0;
-    max-width: 1024px;
-    width: 94%;
-}
+.legend-container {
+    padding-top: 22px;
+    max-width: 430px;
 
-.legend-free .legend-text,
-.legend-booked .legend-text {
-    opacity: 0.5;
-}
-
-.legend-active .legend-text {
-    color: #FE8E05;
-}
-
-
-.legend-label {
-    display: flex;
-    align-items: center;
-    margin-right: 30px;
-}
-
-.legend-text {
-    line-height: 75px;
-    margin-left: 15px;
 }
 
 .m-menu {
@@ -174,14 +153,11 @@ hr {
 }
 
 .rating-icon {
-    margin-left: 34px;
+    margin-right: 12px;
 }
 
 .scheme {
-    background: rgba(36, 36, 36, 0.18);
-    border-radius: 10px;
     margin-top: 61px;
-    padding-top: 48px;
 }
 
 .scheme-svg {
@@ -189,7 +165,11 @@ hr {
 }
 
 .scheme-svg-container {
-    margin: auto;
+    background: rgba(36, 36, 36, 0.18);
+    border-radius: 10px;
+    padding-top: 48px;
+    padding-bottom: 36px;
+
     max-width: 1028px;
     max-height: 559px;
     padding-left: 7.4%;
@@ -207,6 +187,12 @@ hr {
 
 .scheme .active {
     fill: #FE8E05;
+}
+
+.scheme .active:hover {
+    cursor: pointer;
+    fill: #FE8E05;
+    opacity: 0.5;
 }
 
 .scheme .booked, 
@@ -239,8 +225,7 @@ hr {
 
 .session {
     display: flex;
-    padding-top: 46px;
-    padding-bottom: 64px;
+    padding: 46px 0 64px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.5);
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     margin-top: 59px;
@@ -258,13 +243,17 @@ hr {
 .session-time {
     display: flex;
     flex-direction: column;
-    margin-right: 25px;
 }
 
 .session-date-block {
     display: flex;
     margin-top: 20px;
     margin-right: 25px;
+}
+
+.session-date-block-of-two {
+    display: flex;
+    margin-right: 12.5px;
 }
 
 .session-date-day {
@@ -278,11 +267,12 @@ hr {
     flex-direction: column;
     border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 5px;
-    width: 90px;
     height: 90px;
     text-align: center;
     justify-content: center;
     transition: background-color 0.2s;
+    padding-left: 27px;
+    padding-right: 27px;
 }
 
 .session-date-item:not(:last-child) {
@@ -337,7 +327,7 @@ hr {
 
 @media (max-width: 992px) {
     .container {
-        max-width: 750px;
+        max-width: 720px;
     }
 
     .menu {
@@ -347,11 +337,6 @@ hr {
 
     .menu-item {
         margin-right: 20px;
-    }
-
-    .scheme-svg-container {
-        padding-left: 7.4%;
-        padding-right: 7.4%;
     }
 
     .select-cinema {
@@ -381,7 +366,15 @@ hr {
     }
 
     .container {
-        max-width: 600px;
+        max-width: 540px;
+    }
+
+    .film {
+        padding: 25px;
+    }
+
+    .session {
+        padding: 46px 25px 64px 25px;
     }
 
     .session-date {
@@ -444,7 +437,60 @@ hr {
 }
 
 @media (max-width: 576px) {
-    .legend {
-        width: 100%;
+    .scheme {
+        padding: 10px;
+    }
+
+    .scheme-padding {
+        overflow-x: auto;
+    }
+
+    .scheme-svg-container {
+        width: 450px;
+        margin: auto;
+    }
+    
+    .price {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .price-block {
+        margin-bottom: 25px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .session-date-block {
+        flex-direction: column;
+    }
+
+    .session-date-block-of-two {
+        margin-top: 15px;
+    }
+
+    .session-cinema {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 320px) {
+    .film-details {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .m-menu {
+        margin-left: 10px;
+    }
+
+    .rating {
+        margin-left: 0;
+        margin-top: 25px;
+    }
+
+    .film-trailer {
+        margin-left: 0;
     }
 }
